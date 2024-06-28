@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Car} from "./car.model";
 import {CarsServiceService} from "./cars-service.service";
 import {CarsPageRoutingModule} from "./cars-routing.module";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-cars',
@@ -10,17 +11,8 @@ import {CarsPageRoutingModule} from "./cars-routing.module";
   //imports: [CarsPageRoutingModule],
 })
 export class CarsPage implements OnInit {
-// *ngFor="let car in cars"
-  /*cars:Car=[
-    {id:"1",name:"car1",model:"",description:"",imageUrl:""},
-    {id:"2",name:"car2",model:"",description:"",imageUrl:""},
-    {id:"3",name:"car3",model:"",description:"",imageUrl:""}
-  ];
-*/
-  car={id:"1",name:"car1",model:"",description:"",imageUrl:""};
-
   cars:Car[];
-  constructor(private carsService:CarsServiceService) {
+  constructor(private carsService:CarsServiceService,private router:Router) {
     this.cars=carsService.cars;
   }
 

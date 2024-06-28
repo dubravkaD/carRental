@@ -9,7 +9,7 @@ const routes: Routes = [
     component: CarsPage
   },
   {
-    path: 'carId',
+    path: ':id',
     loadChildren: () => import('./car-details/car-details.module').then( m => m.CarDetailsPageModule)
   }
 

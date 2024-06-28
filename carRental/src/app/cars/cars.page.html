@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list>
-    <app-car-element *ngFor="let c in cars" ></app-car-element>
+    <app-car-element *ngFor="let car of cars" [car]="car" routerLink="{{car.id}}"></app-car-element>
   </ion-list>
 
 </ion-content>

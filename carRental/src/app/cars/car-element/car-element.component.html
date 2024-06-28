@@ -1,11 +1,18 @@
 <ion-card>
   <ion-card-header>
-    <ion-card-title>Name</ion-card-title>
-    <ion-card-subtitle>Model</ion-card-subtitle>
+    <ion-card-title>{{car.model}}</ion-card-title>
   </ion-card-header>
+
   <ion-card-content>
-    <ion-icon type="car"></ion-icon>
-    <p>Description</p>
-    <ion-button>make reservation</ion-button>
+    <ion-item routerLink="[/car-details]">
+      <ion-thumbnail slot="start">
+        <ion-img src="{{car.imageUrl}}"/>
+      </ion-thumbnail>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="cart-outline" (click)="seeMore()"></ion-icon>
+    </ion-item>
+    <!--<ion-icon name="car-outline"></ion-icon>-->
+    <!--<ion-button class="ion-justify-content-center" (click)="makeReservation()">make reservation</ion-button>-->
   </ion-card-content>
 </ion-card>

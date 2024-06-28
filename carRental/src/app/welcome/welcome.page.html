@@ -1,7 +1,25 @@
+<ion-header></ion-header>
 <ion-content>
-  <ion-buttons>
-    <ion-button routerLink="/login" fill="solid">Login</ion-button>
-    <ion-button routerLink="/register">Register</ion-button>
-    <ion-button routerLink="/admin-panel">Admin</ion-button>
-  </ion-buttons>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-title>Welcome</ion-title>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button routerLink="/login" fill="solid" shape="round">Login</ion-button>
+        <ion-button routerLink="/register" fill="solid" shape="round">Register</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>Are you admin? </p>
+      </ion-col>
+      <ion-col>
+        <a routerLink="/admin-login">Admin</a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+<ion-footer></ion-footer>

@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Car} from "../car.model";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-car-element',
@@ -8,9 +9,12 @@ import {Car} from "../car.model";
 })
 export class CarElementComponent  implements OnInit {
 
-  @Input() car:Car={id:"",name:"",model:"",description:"",imageUrl:""};
-  constructor() { }
+  @Input() car:Car={id:"",model:"",description:"",imageUrl:""};
+  constructor(private router:Router) { }
 
   ngOnInit() {}
 
+  seeMore() {
+    //this.router.navigateByUrl('/reservations' + paramValue);
+  }
 }

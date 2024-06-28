@@ -16,6 +16,6 @@ import {CarElementComponent} from "../car-element/car-element.component";
     IonicModule,
     CarDetailsPageRoutingModule
   ],
-  declarations: [CarDetailsPage,CarElementComponent]
+  declarations: [CarDetailsPage]
 })
 export class CarDetailsPageModule {}

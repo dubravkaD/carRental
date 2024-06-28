@@ -7,9 +7,9 @@ import {Car} from "./car.model";
 export class CarsServiceService {
 
   cars:Car[]=[
-    {id:"1",name:"car1",model:"",description:"",imageUrl:""},
-    {id:"2",name:"car2",model:"",description:"",imageUrl:""},
-    {id:"3",name:"car3",model:"",description:"",imageUrl:""}
+    {id:"1",model:"car1",description:"",imageUrl:""},
+    {id:"2",model:"car2",description:"",imageUrl:""},
+    {id:"3",model:"car3",description:"",imageUrl:""}
   ];
 
   constructor() { }

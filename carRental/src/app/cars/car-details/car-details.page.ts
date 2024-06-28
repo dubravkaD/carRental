@@ -16,13 +16,17 @@ export class CarDetailsPage implements OnInit {
   // @ts-ignore
   car:Car;
 
-  constructor(private route: ActivatedRoute, private carsService: CarsServiceService) { }
+  constructor(private route: ActivatedRoute, private carsService: CarsServiceService) {
+    console.log(this.route.snapshot.paramMap.get('id'));
+  }
 
   ngOnInit() {
     this.route.paramMap.subscribe(paramMap=>{
           // @ts-ignore
-      this.car=this.carsService.getCar(paramMap.get('carId'))
+      this.car=this.carsService.getCar(paramMap.get('id'))
+      console.log(this.car)
     });
   }
+
 
 }
