@@ -3,6 +3,7 @@ import {Car} from "./car.model";
 import {CarsServiceService} from "./cars-service.service";
 import {CarsPageRoutingModule} from "./cars-routing.module";
 import {Router} from "@angular/router";
+import {of} from "rxjs";
 
 @Component({
   selector: 'app-cars',
@@ -13,7 +14,7 @@ import {Router} from "@angular/router";
 export class CarsPage implements OnInit {
   cars:Car[];
   constructor(private carsService:CarsServiceService,private router:Router) {
-    this.cars=carsService.cars;
+    this.cars=carsService.cars
   }
 
   ngOnInit() {

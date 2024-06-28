@@ -1,10 +1,10 @@
-<ion-card>
+<ion-card routerLink="[/{{car.id}}">
   <ion-card-header>
     <ion-card-title>{{car.model}}</ion-card-title>
   </ion-card-header>
 
   <ion-card-content>
-    <ion-item routerLink="[/car-details]">
+    <ion-item >
       <ion-thumbnail slot="start">
         <ion-img src="{{car.imageUrl}}"/>
       </ion-thumbnail>
